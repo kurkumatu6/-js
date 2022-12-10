@@ -45,13 +45,18 @@ arrStudents.forEach(item => {
         countAbs ++;
     }
 })
-console.log(`абсолютная успеваемость группы - ${countAbs/arrStudents.length * 100}%`)
-main.insertAdjacentHTML("beforeend", `<p>абсолютная успеваемость группы - ${countAbs/arrStudents.length * 100}%</p>`)
+console.log(`Абсолютная успеваемость группы - ${countAbs/arrStudents.length * 100}%`)
+main.insertAdjacentHTML("beforeend", `<p>Абсолютная успеваемость группы - ${countAbs/arrStudents.length * 100}%</p>`)
 let countKac = 0
 arrStudents.forEach(item => {
     if(item.xorosh){
         countKac ++;
     }
 })
-console.log(`абсолютная успеваемость группы - ${countKac/arrStudents.length * 100}%`)
-main.insertAdjacentHTML("beforeend", `<p>абсолютная успеваемость группы - ${countKac/arrStudents.length * 100}%</p>`)
+console.log(`Качественная успеваемость группы - ${countKac/arrStudents.length * 100}%`)
+main.insertAdjacentHTML("beforeend", `<p>Качественная успеваемость группы - ${countKac/arrStudents.length * 100}%</p>`)
+
+let  allSrBall = 0
+arrStudents.forEach(item => allSrBall += item.srBall)
+console.log(`Средний балл группы по всем предметам - ${(allSrBall/arrStudents.length).toFixed(2) }`)
+main.insertAdjacentHTML("beforeend", `<p>Средний балл группы по всем предметам  - ${(allSrBall/arrStudents.length).toFixed(2) }</p>`)
